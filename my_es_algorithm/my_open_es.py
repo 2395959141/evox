@@ -16,7 +16,7 @@ from evox import Algorithm, State, jit_class, use_state, utils
 
 
 @jit_class
-class OpenES(Algorithm):
+class my_OpenES(Algorithm):
     def __init__(
         self,
         center_init,
