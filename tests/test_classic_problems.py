@@ -1,4 +1,4 @@
-import chex
+import chex   #一个用于测试和调试 JAX 代码的库
 import jax
 import jax.numpy as jnp
 import pytest

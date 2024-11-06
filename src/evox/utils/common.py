@@ -19,9 +19,20 @@ def min_by(
     if isinstance(values, list):
         values = jnp.concatenate(values)
         keys = jnp.concatenate(keys)
-
+    
     min_index = jnp.argmin(keys)
     return values[min_index], keys[min_index]
+
+def max_by(
+    values: Union[jax.Array, list[jax.Array]],
+    keys: Union[jax.Array, list[jax.Array]],
+):
+    if isinstance(values, list):
+        values = jnp.concatenate(values)
+        keys = jnp.concatenate(keys)
+
+    max_index = jnp.argmax(keys)
+    return values[max_index], keys[max_index]
 
 
 def _prod_tuple(xs):
