@@ -164,7 +164,7 @@ def _eld_pso(x):
     
     # x = jnp.clip(x, lb, ub)  # 确保更新后的值不超出上下限
             
-    return ((a * (x ** 2) + b * x + c).sum() + jnp.abs(g * jnp.sin(h * (Pd - x))).sum())
+    return ((a * (x ** 2) + b * x + c).sum() + jnp.abs(g * jnp.sin(h * (x - lb))).sum())
 
 
 

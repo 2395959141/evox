@@ -29,7 +29,7 @@ class my_PSO_Model_Swarm(Algorithm):
         cognitive_coefficient=2.5,
         social_coefficient=0.8,
         repulsion_coefficient=0.05,  # 添加新的系数用于最差解的排斥
-        stagnation_threshold = 1000,
+        stagnation_threshold = 2000,
         mean=None,
         stdev=None,
         velocity_decay_rate=0.90,  # 速度衰减率

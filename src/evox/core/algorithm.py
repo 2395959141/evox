@@ -7,7 +7,7 @@ from .module import *
 from .state import State
 
 
-class Algorithm(Stateful):
+class Algorithm(Stateful):  ##继承Stateful类,用于管理状态的能力
     """Base class for all algorithms"""
 
     def ask(self, state: State) -> Tuple[jax.Array, State]:
@@ -27,7 +27,7 @@ class Algorithm(Stateful):
         state
             The new state of the algorithm.
         """
-        return jnp.zeros(0), State()
+        return jnp.zeros(0), State()  ##返回候选解和新的状态
 
     def tell(self, state: State, fitness: jax.Array) -> State:
         """Tell the algorithm more information

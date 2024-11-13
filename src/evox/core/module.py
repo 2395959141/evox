@@ -234,7 +234,7 @@ class Stateful:
                 if isinstance(attr, Stateful):
                     submodules.append(SubmoduleInfo(field.name, attr, field.metadata))
         else:
-            for attr_name in vars(self):
+            for attr_name in vars(self):  ##使用vars()获取当前实例的所有属性
                 attr = getattr(self, attr_name)
                 if not attr_name.startswith("_") and isinstance(attr, Stateful):
                     submodules.append(SubmoduleInfo(attr_name, attr, {}))
